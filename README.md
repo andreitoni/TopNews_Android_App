@@ -10,5 +10,9 @@ A news aggregator app where the user can:
 
 
 
+https://user-images.githubusercontent.com/47723726/131000340-a79ee7c6-a681-404a-934e-f4e33b9c5367.mp4
+
+
+
 
 (The data is fetched from https://newsapi.org/)
