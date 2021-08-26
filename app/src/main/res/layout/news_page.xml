@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_newsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@+id/btn_searchNews"
+        android:ems="10"
+        android:hint="@string/keyword_or_phrase_to_search_for"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/backgroundColor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider9"
+        android:layout_centerHorizontal="true"
+        tools:itemCount="200"
+        tools:listitem="@layout/news_item_layout" />
+
+    <View
+        android:id="@+id/v_blackScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        tools:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="183dp" />
+
+    <TextView
+        android:id="@+id/tv_noInternetCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/_3"
+        android:textColor="@android:color/white"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextSearch"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/btn_searchNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rv_recyclerView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="-1dp"
+        android:text="@string/search" />
+
+
+</RelativeLayout>
